@@ -17,7 +17,7 @@ header {
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
-  padding: 1rem 2rem;
+  padding: 0.6rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,6 +26,10 @@ header {
   z-index: 100;
   border-bottom: 4px solid #C41E3A;
   transition: all 0.3s ease;
+}
+
+header.hide {
+  transform: translateY(-100%);
 }
 
 header.scrolled {
@@ -71,7 +75,7 @@ header.scrolled nav a:hover {
 header img {
   position: absolute;
   left: 2rem;
-  max-width: 160px;
+  max-width: 140px;
   height: auto;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
   transition: transform 0.3s ease;
@@ -100,7 +104,7 @@ nav {
 }
 
 nav a {
-  padding: 0.8rem 1.5rem;
+  padding: 0.7rem 1.3rem;
   min-height: 44px;
   min-width: 44px;
   display: flex;
@@ -112,7 +116,7 @@ nav a {
   border-radius: 25px;
   border-color: 2px solid #0B2E5B;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  font-size: 1rem;
+  font-size: 0.95rem;
   position: relative;
 }
 
@@ -502,22 +506,22 @@ footer div {
   }
 
   header {
-    padding: 1rem;
+    padding: 0.6rem;
   }
 
   header img {
-    max-width: 100px;
-    left: 1rem;
+    max-width: 90px;
+    left: 0.75rem;
   }
 
   nav {
-    gap: 0.4rem;
-    padding: 0.4rem;
+    gap: 0.35rem;
+    padding: 0.35rem;
   }
 
   nav a {
-    padding: 0.8rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.7rem 0.9rem;
+    font-size: 0.85rem;
     min-height: 44px;
     min-width: 44px;
     display: flex;
@@ -622,22 +626,22 @@ footer div {
   }
 
   header {
-    padding: 0.75rem;
+    padding: 0.5rem;
   }
 
   header img {
-    max-width: 80px;
-    left: 0.75rem;
+    max-width: 70px;
+    left: 0.5rem;
   }
 
   nav {
-    gap: 0.3rem;
-    padding: 0.35rem;
+    gap: 0.25rem;
+    padding: 0.3rem;
   }
 
   nav a {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.85rem;
+    padding: 0.6rem 0.7rem;
+    font-size: 0.8rem;
   }
 
   .cta-button {

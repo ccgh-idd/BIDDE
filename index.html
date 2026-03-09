@@ -376,6 +376,21 @@
   </footer>
 
   <script>
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', function () {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScroll > lastScrollTop && currentScroll > 100) {
+        header.classList.add('hide');
+      } else {
+        header.classList.remove('hide');
+      }
+
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+
     document.addEventListener("DOMContentLoaded", function () {
       const showMoreBtn = document.getElementById("show-more-past-events");
       const olderEvents = document.querySelectorAll(".older-event");
