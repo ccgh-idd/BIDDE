@@ -13,33 +13,34 @@
 
 <body>
   <header>
-    <nav>
+    <nav id="nav-menu">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#events">Events</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button class="hamburger" id="hamburger-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Berlin Infectious Disease Dynamics Expertise Network </br>B-IDDE</h1>
+    </div>
+  </section>
+
   <main>
 
-    <section id="home" class="section">
-      <h1>Berlin Infectious Disease Dynamics Expertise network (B-IDDE)</h1>
-
+    <section id="about" class="section">
+      <h2>About the Network</h2>
       <p>
         B-IDDE is a Berlin-based interdisciplinary network connecting researchers working on infectious disease
         dynamics, epidemiological modelling, data science, phylodynamics, and policy-relevant outbreak analysis.
       </p>
-
-      <p>
-        The network fosters collaboration across institutions, supports advanced methodological training, and
-        strengthens scientific exchange between academia and public health practice. Our mission is to strengthen
-        interdisciplinary collaboration and enhance Berlin's visibility as a hub for infectious disease dynamics
-        research.
-      </p>
-    </section>
-
-    <section id="about" class="section">
-      <h2>About the Network</h2>
       <p>
         B-IDDE brings together researchers across Berlin with expertise and / or interest in infectious disease
         modelling, data analysis, and outbreak analytics. We are currently a group of more than 60 members including
@@ -376,6 +377,22 @@
   </footer>
 
   <script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = navMenu.querySelectorAll('a');
+
+    hamburgerBtn.addEventListener('click', () => {
+      hamburgerBtn.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburgerBtn.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
     let lastScrollTop = 0;
     const header = document.querySelector('header');
 
