@@ -6,11 +6,8 @@ body {
   font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
   color: #1a1a1aa8;
-  background: url('Pics/Background_bw.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8f0f7 100%);
+  min-height: 100vh;
 }
 
 /* Hero Section */
@@ -131,15 +128,15 @@ header.scrolled nav a:hover {
 
 header img {
   position: absolute;
-  left: 2rem;
-  max-width: 140px;
+  left: 1.5rem;
+  max-width: 100px;
   height: auto;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 header.scrolled img {
-  display: none;
+  max-width: 70px;
 }
 
 header img:hover {
@@ -296,6 +293,54 @@ main {
   color: #333;
   font-size: 1.1rem;
   line-height: 1.8;
+}
+
+/* About Section Layout */
+#about {
+  display: flex;
+  align-items: stretch;
+  gap: 3rem;
+}
+
+#about .about-text {
+  flex: 1;
+  min-width: 0;
+}
+
+#about .about-image {
+  flex: 0 0 450px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+#about .about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#about:hover .about-image img {
+  transform: scale(1.05);
+}
+
+#about h2 {
+  margin-bottom: 2rem;
+}
+
+/* Responsive design for about section */
+@media (max-width: 1024px) {
+  #about {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  #about .about-image {
+    flex: 0 0 auto;
+    max-width: 100%;
+    height: 400px;
+  }
 }
 
 .section a {
