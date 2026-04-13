@@ -296,12 +296,51 @@ main {
 }
 
 /* About Section Layout */
+#about {
+  display: flex;
+  align-items: stretch;
+  gap: 3rem;
+}
+
+#about .about-text {
+  flex: 1;
+  min-width: 0;
+}
+
+#about .about-image {
+  flex: 0 0 450px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+#about .about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#about:hover .about-image img {
+  transform: scale(1.05);
+}
+
 #about h2 {
   margin-bottom: 2rem;
 }
 
-#about p {
-  max-width: 900px;
+/* Responsive design for about section */
+@media (max-width: 1024px) {
+  #about {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  #about .about-image {
+    flex: 0 0 auto;
+    max-width: 100%;
+    height: 400px;
+  }
 }
 
 .section a {
@@ -351,7 +390,7 @@ footer {
 .contact-logos-box {
   flex: 0 0 auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 1rem;
   padding: 1.5rem;
   background: rgba(11, 46, 91, 0.08);
