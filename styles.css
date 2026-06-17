@@ -487,7 +487,7 @@ footer div {
 .event-section strong {
   color: #0B2E5B;
   display: block;
-  font-size: 0.85rem;
+  font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 0.3rem;
@@ -518,6 +518,25 @@ footer div {
 .event-section-link .event-section p {
   font-weight: normal;
   color: #333;
+}
+
+.speaker-entry {
+  margin: 0.5rem 0;
+}
+
+.speaker-entry p {
+  margin: 0;
+  color: #333;
+}
+
+.event-content .event-section .speaker-entry strong {
+  color: #333 !important;
+  display: inline;
+  font-weight: 600;
+  font-size: inherit;
+  text-transform: none;
+  letter-spacing: normal;
+  margin-bottom: 0;
 }
 
 .event-content strong {

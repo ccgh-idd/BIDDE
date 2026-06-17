@@ -189,8 +189,8 @@
         if (link) {
           html += `<a href="${link}" target="_blank" rel="noopener noreferrer" class="event-section-link">`;
         }
-        html += `<div class="event-section"><strong>Training:</strong>`;
-        html += `<p>${title}${instructors ? ` <br>(${instructors})` : ''}</p></div>`;
+        html += `<div class="event-section"><strong>Training</strong>`;
+        html += `<div class="speaker-entry"><p>${instructors ? `<strong>${instructors}:</strong> ` : ''}${title}</p></div></div>`;
         if (link) {
           html += `</a>`;
         }
@@ -198,16 +198,16 @@
 
       // Seminar section
       if (event.seminar && event.seminar.length > 0) {
-        html += `<div class="event-section"><strong>Seminar:</strong>`;
+        html += `<div class="event-section"><strong>Seminar</strong>`;
         event.seminar.forEach((sem, idx) => {
           const speaker = sem.speaker || sem.instructors || '';
-          html += `<p>${idx > 0 ? '(' + String.fromCharCode(96 + idx + 1) + ') ' : '(i) '}${sem.topic}${speaker ? ` <br>(${speaker})` : ''}</p>`;
+          html += `<div class="speaker-entry"><p>${speaker ? `<strong>${speaker}:</strong> ` : ''}${sem.topic}</p></div>`;
         });
         html += `</div>`;
       }
 
       // Place section
-      html += `<div class="event-section"><strong>Place:</strong><p>${event.place}</p></div>`;
+      html += `<div class="event-section"><strong>Place</strong><p>${event.place}</p></div>`;
       html += `</div></div>`;
 
       return html;

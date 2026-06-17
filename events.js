@@ -9,7 +9,8 @@ const EVENTS_DATA = {
       "month": "July",
       "year": 2026,
       "training": {
-        "title": "tbc"
+        "title": "tbc",
+        "instructors": "David Hodgson"
       },
       "seminar": [
         {
@@ -17,7 +18,8 @@ const EVENTS_DATA = {
           "speaker": "Julia Mayer"
         },
         {
-          "topic": "tbc"
+          "topic": "tbc",
+          "speaker": "tbc"
         }
       ],
       "place": "The WHO Pandemic Hub"
@@ -27,7 +29,8 @@ const EVENTS_DATA = {
       "month": "September",
       "year": 2026,
       "training": {
-        "title": "tbc"
+        "title": "tbc",
+        "instructors": "Andreas Handel"
       },
       "seminar": [
         {
