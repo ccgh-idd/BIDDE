@@ -29,7 +29,7 @@ const EVENTS_DATA = {
       "month": "September",
       "year": 2026,
       "training": {
-        "title": "tbc",
+        "title": "Reproducible, AI assisted modeling and data science projects",
         "instructors": "Andreas Handel"
       },
       "seminar": [
