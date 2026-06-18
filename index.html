@@ -167,11 +167,21 @@
 
     /**
      * Classify event as upcoming or past
+     * Events are marked as past on the 15th of their month
      */
     function classifyEvent(eventDate, currentDate) {
+      const now = new Date();
+      const currentDay = now.getDate();
+      
       if (eventDate.year > currentDate.year) return 'upcoming';
       if (eventDate.year < currentDate.year) return 'past';
-      return eventDate.month >= currentDate.month ? 'upcoming' : 'past';
+      
+      // Same year - check month and day
+      if (eventDate.month > currentDate.month) return 'upcoming';
+      if (eventDate.month < currentDate.month) return 'past';
+      
+      // Same month - check if current day is past the 15th
+      return currentDay <= 15 ? 'upcoming' : 'past';
     }
 
     /**
