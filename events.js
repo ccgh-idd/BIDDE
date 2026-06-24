@@ -18,8 +18,8 @@ const EVENTS_DATA = {
           "speaker": "Julia Mayer"
         },
         {
-          "topic": "tbc",
-          "speaker": "tbc"
+          "topic": "Towards Real-Time Evidence Synthesis for Public Health Emergencies: Early Application to the current Ebola Outbreak",
+          "speaker": "Steve Kerr"
         }
       ],
       "place": "The WHO Pandemic Hub"
