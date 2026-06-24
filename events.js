@@ -9,7 +9,7 @@ const EVENTS_DATA = {
       "month": "July",
       "year": 2026,
       "training": {
-        "title": "tbc",
+        "title": "A whirlwind tour of MCMC samplers and diagnostics",
         "instructors": "David Hodgson"
       },
       "seminar": [
