@@ -92,7 +92,8 @@ const EVENTS_DATA = {
       "year": 2026,
       "training": {
         "title": "A hitchhiker's guide to vibe coding in IDD",
-        "instructors": "Billy Quilty"
+        "instructors": "Billy Quilty",
+        "link": "https://github.com/ccgh-idd/hitchhikers_guide_to_vibe_coding_in_idd"
       },
       "seminar": [
         {
