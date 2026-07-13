@@ -5,6 +5,32 @@
 const EVENTS_DATA = {
   "events": [
 
+      {
+      "month": "November",
+      "year": 2026,
+      "training": {
+        "title": "tbc"
+      },
+      "seminar": [
+        {
+          "topic": "tbc"
+        }
+      ],
+      "place": "Charité - Universitätsmedizin Berlin"
+    },
+      {
+      "month": "December",
+      "year": 2026,
+      "training": {
+        "title": "IDD career pathways and opportunities",
+      },
+      "seminar": [
+        {
+          "topic": "tbc"
+        }
+      ],
+      "place": "Charité - Universitätsmedizin Berlin"
+    },
     {
       "month": "July",
       "year": 2026,
