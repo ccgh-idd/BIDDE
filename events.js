@@ -37,7 +37,7 @@ const EVENTS_DATA = {
       "training": {
         "title": "A whirlwind tour of MCMC samplers and diagnostics",
         "instructors": "David Hodgson",
-        "link: https://bidde.ccgh-idd.de/bidde_sampler_talk.pdf"
+        "link": "https://bidde.ccgh-idd.de/bidde_sampler_talk.pdf"
       },
       "seminar": [
         {
