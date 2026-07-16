@@ -9,7 +9,8 @@ const EVENTS_DATA = {
       "month": "November",
       "year": 2026,
       "training": {
-        "title": "tbc"
+        "title": "Scientific communication through visualization",
+        "instructors": "tbc"
       },
       "seminar": [
         {
