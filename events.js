@@ -62,7 +62,7 @@ const EVENTS_DATA = {
       },
       "seminar": [
         {
-          "topic": "tbc",
+          "topic": "Model-based evaluation of influenza vaccination outcomes",
           "speaker": "Andreas Handel"
         }
       ],
