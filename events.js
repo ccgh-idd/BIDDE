@@ -58,12 +58,14 @@ const EVENTS_DATA = {
       "year": 2026,
       "training": {
         "title": "Reproducible, AI assisted modeling and data science projects",
-        "instructors": "Andreas Handel"
+        "instructors": "Andreas Handel",
+        "link": "https://www.andreashandel.com/presentations/2026-09-BIDDE-tutorial/"
       },
       "seminar": [
         {
           "topic": "Model-based evaluation of influenza vaccination outcomes",
-          "speaker": "Andreas Handel"
+          "speaker": "Andreas Handel",
+          "link": "https://www.andreashandel.com/presentations/2026-09-BIDDE-talk/"
         }
       ],
       "place": "Charité - Universitätsmedizin Berlin"

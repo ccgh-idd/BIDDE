@@ -208,12 +208,19 @@
 
       // Seminar section
       if (event.seminar && event.seminar.length > 0) {
+        const seminarLink = event.seminar.find(sem => sem.link)?.link;
+        if (seminarLink) {
+          html += `<a href="${seminarLink}" target="_blank" rel="noopener noreferrer" class="event-section-link">`;
+        }
         html += `<div class="event-section"><strong>Seminar</strong>`;
         event.seminar.forEach((sem, idx) => {
           const speaker = sem.speaker || sem.instructors || '';
           html += `<div class="speaker-entry"><p>${speaker ? `<strong>${speaker}:</strong> ` : ''}${sem.topic}</p></div>`;
         });
         html += `</div>`;
+        if (seminarLink) {
+          html += `</a>`;
+        }
       }
 
       // Place section
