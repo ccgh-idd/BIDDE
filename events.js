@@ -14,7 +14,8 @@ const EVENTS_DATA = {
       },
       "seminar": [
         {
-          "topic": "tbc"
+          "topic": "tbc",
+          "speaker": "tbc"
         }
       ],
       "place": "Charité - Universitätsmedizin Berlin"
@@ -24,6 +25,7 @@ const EVENTS_DATA = {
       "year": 2026,
       "training": {
         "title": "IDD career pathways and opportunities",
+        "instructors": "Berit Lange, Finlay Campell, Frank Sandmann, Stefan Scholz, Zoe Ingram & Stefanie Althoff"
       },
       "seminar": [
         {
@@ -75,11 +77,13 @@ const EVENTS_DATA = {
       "month": "October",
       "year": 2026,
       "training": {
-        "title": "POMP"
+        "title": "An introduction to POMP",
+        "instructors": "tbc"
       },
       "seminar": [
         {
-          "topic": "tbc"
+          "topic": "tbc",
+          "speaker": "tbc"
         }
       ],
       "place": "Max Planck Institute"
