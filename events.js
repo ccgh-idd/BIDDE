@@ -27,7 +27,8 @@ const EVENTS_DATA = {
       },
       "seminar": [
         {
-          "topic": "tbc"
+          "topic": "Bundibugyo in DRC, current status, local context, und lessons learned (for modellers)",
+          "speaker": "Hugo Soubrier"
         }
       ],
       "place": "Charité - Universitätsmedizin Berlin"
