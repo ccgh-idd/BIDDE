@@ -77,16 +77,20 @@ const EVENTS_DATA = {
       "month": "October",
       "year": 2026,
       "training": {
-        "title": "An introduction to POMP",
-        "instructors": "tbc"
+        "title": "A tutorial on epidemic modeling with the R package pomp",
+        "instructors": "Matthieu Domenech de Cellès & MPI Team",
       },
       "seminar": [
         {
-          "topic": "tbc",
-          "speaker": "tbc"
+          "topic": "U-shaped effects of humidity and the impact of misspecified weather-transmission relationships in epidemic models",
+          "speaker": "Cana Kussmaul"
+        },
+        {
+          "topic": "The pitfalls of incidence-based time series regression for inferring the effects of  weather on infectious diseases",
+          "speaker": "Pietro Gemo"
         }
       ],
-      "place": "Max Planck Institute"
+      "place": "Charité - Universitätsmedizin Berlin"
     },
     {
       "month": "June",
