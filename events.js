@@ -10,7 +10,7 @@ const EVENTS_DATA = {
       "year": 2026,
       "training": {
         "title": "Scientific communication through visualization",
-        "instructors": "tbc"
+        "instructors": "Stefan Flasche"
       },
       "seminar": [
         {
