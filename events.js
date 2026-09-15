@@ -10,7 +10,8 @@ const EVENTS_DATA = {
       "year": 2026,
       "training": {
         "title": "Scientific communication through visualization",
-        "instructors": "Stefan Flasche"
+        "instructors": "Stefan Flasche",
+        "link": "https://stefanflasche.github.io/2026_10-BIDDE-Vis/"
       },
       "seminar": [
         {
