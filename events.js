@@ -15,6 +15,10 @@ const EVENTS_DATA = {
       },
       "seminar": [
         {
+          "topic": "Future Requirements and Opportunities for Universal and Frequent Testing - motivated by the German experience with the (imperfect) integration of lab- and community-based testing into an exposure notification app infrastructure",
+          "speaker": "Justus Benzler"
+        },
+        {
           "topic": "tbc",
           "speaker": "tbc"
         }
