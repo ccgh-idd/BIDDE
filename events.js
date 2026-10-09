@@ -84,6 +84,7 @@ const EVENTS_DATA = {
       "training": {
         "title": "A tutorial on epidemic modeling with the R package pomp",
         "instructors": "Matthieu Domenech de Cellès & MPI Team",
+        "link": "https://github.com/cakussmaul/pompWorkshop"
       },
       "seminar": [
         {
