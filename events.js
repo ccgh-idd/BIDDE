@@ -36,6 +36,29 @@ const EVENTS_DATA = {
         {
           "topic": "Bundibugyo in DRC, current status, local context, und lessons learned (for modellers)",
           "speaker": "Hugo Soubrier"
+        },
+        {
+          "topic": "tbc",
+          "speaker": "tbc"
+        }
+      ],
+      "place": "Charité - Universitätsmedizin Berlin"
+    },
+      {
+      "month": "January",
+      "year": 2027,
+      "training": {
+        "title": "AI Skills and Collaborative coding",
+        "instructors": "Billy Quilty"
+      },
+      "seminar": [
+        {
+          "topic": "tbc",
+          "speaker": "tbc"
+        },
+        {
+          "topic": "tbc",
+          "speaker": "tbc"
         }
       ],
       "place": "Charité - Universitätsmedizin Berlin"
