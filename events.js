@@ -30,11 +30,11 @@ const EVENTS_DATA = {
       "year": 2026,
       "training": {
         "title": "IDD career pathways and opportunities",
-        "instructors": "Berit Lange, Finlay Campell, Frank Sandmann, Stefan Scholz, Zoe Ingram & Stefanie Althoff"
+        "instructors": "Berit Lange, Finlay Campbell, Frank Sandmann, Stefan Scholz, Zoe Ingram & Stefanie Althoff"
       },
       "seminar": [
         {
-          "topic": "Bundibugyo in DRC, current status, local context, und lessons learned (for modellers)",
+          "topic": "Bundibugyo in DRC, current status, local context, and lessons learned (for modellers)",
           "speaker": "Hugo Soubrier"
         },
         {
@@ -352,7 +352,7 @@ const EVENTS_DATA = {
           "speaker": "Stefan Flasche"
         },
         {
-          "topic": "DeepSeek und a workflow example",
+          "topic": "DeepSeek and a workflow example",
           "speaker": "Kaige Dong"
         }
       ],
@@ -365,7 +365,7 @@ const EVENTS_DATA = {
       "seminar": [
         {
           "topic": "Charite on outbreaks response",
-          "instructors": "Billy and Hugo"
+          "speaker": "Billy and Hugo"
         }
       ],
       "place": "Charité - Universitätsmedizin Berlin"

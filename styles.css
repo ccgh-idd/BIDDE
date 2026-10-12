@@ -3,9 +3,10 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
-  color: #1a1a1aa8;
+  color: #2b2f36;
+  -webkit-font-smoothing: antialiased;
   background: linear-gradient(135deg, #f5f7fa 0%, #e8f0f7 100%);
   min-height: 100vh;
 }
@@ -14,10 +15,7 @@ body {
 .hero {
   background: linear-gradient(135deg, rgba(11, 46, 91, 0.5) 0%, rgba(196, 30, 58, 0.4) 100%), 
               url('Pics/Hero.JPG') no-repeat center;
-  -webkit-background-size: auto 100%;
-  -moz-background-size: auto 100%;
-  -o-background-size: auto 100%;
-  background-size: auto 100%;
+  background-size: cover;
   background-attachment: fixed;
   color: white;
   padding: 3.5rem 2rem;
@@ -53,6 +51,7 @@ body {
   font-weight: 800;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 .hero p {
@@ -86,45 +85,10 @@ header.hide {
   transform: translateY(-100%);
 }
 
-header.scrolled {
-  padding: 0.5rem 1rem;
-  background: #0B2E5BBF;
-}
 
-header.scrolled nav {
-  position: fixed;
-  right: 2rem;
-  top: 2rem;
-  gap: 0.5rem;
-  flex-direction: column;
-  width: auto;
-  background: transparent;
-  padding: 0.75rem;
-  border-radius: 12px;
-  box-shadow: none;
-}
 
-header.scrolled nav a {
-  padding: 0.75rem 1.5rem;
-  font-size: 0.9rem;
-  white-space: nowrap;
-  background: white;
-  color: #0B2E5B;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-header.scrolled nav a::before {
-  display: none;
-}
 
-header.scrolled nav a:hover {
-  background: linear-gradient(135deg, #0B2E5B 0%, #C41E3A 100%);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
 
 header img {
   position: absolute;
@@ -135,9 +99,6 @@ header img {
   transition: all 0.3s ease;
 }
 
-header.scrolled img {
-  max-width: 70px;
-}
 
 header img:hover {
   transform: scale(1.05);
@@ -455,12 +416,45 @@ footer div {
 }
 
 .event-date {
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #C41E3A;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
   margin-bottom: 1rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 2px solid #C41E3A;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(11, 46, 91, 0.12);
+}
+
+.event-date-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 58px;
+  padding: 0.4rem 0.5rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0B2E5B 0%, #C41E3A 100%);
+  color: white;
+  line-height: 1.1;
+}
+
+.badge-month {
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badge-year {
+  font-size: 0.75rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.event-place {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0B2E5B;
+  line-height: 1.3;
 }
 
 .event-content p {
@@ -537,6 +531,65 @@ footer div {
   text-transform: none;
   letter-spacing: normal;
   margin-bottom: 0;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  margin-bottom: 0.4rem;
+}
+
+.section-tag-training {
+  background: rgba(196, 30, 58, 0.12);
+  color: #a3172f;
+}
+
+.section-tag-seminar {
+  background: rgba(11, 46, 91, 0.12);
+  color: #0B2E5B;
+}
+
+.materials-cue {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #C41E3A;
+}
+
+/* Past events: more compact than upcoming */
+.past-grid {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.past-grid .event-card {
+  padding: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.past-grid .event-card:hover {
+  transform: translateY(-3px);
+}
+
+.past-grid .event-date-badge {
+  background: #5b6b80;
+}
+
+.past-grid .event-content p {
+  font-size: 0.92rem;
+}
+
+.hero-tagline {
+  font-size: 1.3rem;
+  font-weight: 500;
+  max-width: 640px;
+  opacity: 0.95;
 }
 
 .event-content strong {
@@ -906,4 +959,108 @@ footer div {
   .hero .cta-button {
     display: none;
   }
+}
+
+
+/* About: institutions as nodes on the network illustration */
+.institution-nodes {
+  position: absolute;
+  inset: 0;
+}
+
+.section a.inst-node {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.75rem 0.3rem 0.4rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 4px 14px rgba(11, 46, 91, 0.15);
+  color: #0B2E5B;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  animation: nodeFloat 6s ease-in-out infinite;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.section a.inst-node:hover {
+  background: #0B2E5B;
+  color: white;
+  z-index: 2;
+}
+
+.inst-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #C41E3A;
+  box-shadow: 0 0 0 4px rgba(196, 30, 58, 0.2);
+}
+
+@keyframes nodeFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section a.inst-node { animation: none; }
+}
+
+@media (max-width: 1024px) {
+  .institution-nodes { position: static; display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+  .section a.inst-node { position: static; animation: none; }
+}
+
+/* About: ECTS badge */
+.section a.ects-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 0.75rem;
+  padding: 0.85rem 1.2rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(11, 46, 91, 0.06) 0%, rgba(196, 30, 58, 0.08) 100%);
+  border-left: 4px solid #C41E3A;
+  color: #333;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.section a.ects-badge:hover {
+  color: #333;
+  box-shadow: 0 4px 14px rgba(11, 46, 91, 0.12);
+}
+
+.ects-badge strong {
+  color: #0B2E5B;
+}
+
+.ects-icon {
+  font-size: 1.8rem;
+}
+
+.ects-link {
+  color: #0B2E5B;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  #about .about-image {
+    height: auto;
+    overflow: visible;
+  }
+  #about .about-image img {
+    height: 300px;
+    border-radius: 16px;
+  }
+}
+
+/* Subtle highlighter for key phrases */
+.section mark {
+  background: linear-gradient(transparent 60%, rgba(196, 30, 58, 0.15) 60%);
+  color: inherit;
+  font-weight: 600;
+  padding: 0;
 }

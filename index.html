@@ -7,9 +7,18 @@
   <meta name="description"
     content="B-IDDE is a Berlin-based interdisciplinary network connecting researchers working on infectious disease dynamics, epidemiological modelling, data science, and outbreak analysis.">
   <title>B-IDDE</title>
-  <link rel="icon" type="image/jpeg" href="Pics/Favicon.png">
-  <link rel="stylesheet" href="styles.css">
-  <script src="events.js?v=1.1"></script>
+  <link rel="icon" type="image/png" href="Pics/Favicon.png">
+  <meta property="og:title" content="B-IDDE – Berlin Infectious Disease Dynamics Expertise Network">
+  <meta property="og:description" content="Monthly training and seminars for Berlin's infectious disease modelling community.">
+  <meta property="og:image" content="https://bidde.ccgh-idd.de/Pics/Hero.JPG">
+  <meta property="og:url" content="https://bidde.ccgh-idd.de/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=1.8">
+  <script src="events.js?v=1.2"></script>
 </head>
 
 <body>
@@ -21,7 +30,7 @@
       <a href="#events">Events</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="hamburger" id="hamburger-btn">
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
       <span></span>
       <span></span>
       <span></span>
@@ -31,7 +40,8 @@
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="hero-content">
-      <h1>Berlin Infectious Disease Dynamics Expertise Network </br>B-IDDE</h1>
+      <h1>Berlin Infectious Disease Dynamics Expertise Network<br>B-IDDE</h1>
+      <p class="hero-tagline">Monthly training and seminars for Berlin's infectious disease modelling community</p>
     </div>
   </section>
 
@@ -41,33 +51,42 @@
       <div class="about-text">
         <h2>About the Network</h2>
         <p>
-          B-IDDE is a Berlin-based interdisciplinary network connecting researchers working on infectious disease
+          B-IDDE is a <mark>Berlin-based interdisciplinary network</mark> connecting researchers working on infectious disease
           dynamics, epidemiological modelling, data science, phylodynamics, and policy-relevant outbreak analysis.
         </p>
         <p>
           B-IDDE brings together researchers across Berlin with expertise and / or interest in infectious disease
-          modelling, data analysis, and outbreak analytics. We are currently a group of more than 60 members including
-          from <a href="https://www.charite.de/en/" target="_blank">Charite - Universitätsmedizin Berlin</a>, the <a href="https://pandemichub.who.int/" target="_blank">World Health Organisation's Hub for Pandemic and Epidemic Intelligence</a>, the <a href="https://www.rki.de" target="_blank">Robert Koch Institute</a>, the <a href="https://www.mpiib-berlin.mpg.de/" target="_blank">Max Planck Institute for Infection Biology</a>, the <a href="https://www.tu.berlin/" target="_blank">Technische Universität Berlin</a>, the <a href="https://www.fu-berlin.de/" target="_blank">Freie Universität Berlin</a> and the <a href="https://www.hu-berlin.de/" target="_blank">Humboldt University of Berlin</a>.
+          modelling, data analysis, and outbreak analytics. We are currently a group of <mark>more than 60 members</mark> from
+          universities, research institutes and public health organisations across the city.
         </p>
         <p>
-          The network is open to all researchers working on infectious disease dynamics in Berlin, including those from
+          The network is <mark>open to all researchers</mark> working on infectious disease dynamics in Berlin, including those from
           academia, public health institutions, and other relevant organizations. We welcome members with a wide range of
           expertise, including epidemiological modelling, data science, phylodynamics, and policy-relevant outbreak
           analysis.
         </p>
         <p>
-          The main activity of the network is monthly meetings, which consist of a training session followed by a seminar.
-          The training sessions cover a range research skills needed in infectious disease dynamics. The seminars feature
+          The main activity of the network is <mark>monthly meetings</mark>, which consist of a <mark>training session followed by a seminar</mark>.
+          The training sessions cover a range of research skills needed in infectious disease dynamics. The seminars feature
           presentations from members of the network as well as regular invited speakers on current research and
           policy-relevant topics in the field.
         </p>
-        <p>
-          B-IDDE is <a href="https://promotion.charite.de/en/doctorate_environment/recognition" target="_blank">ECTS accredited</a>. Please contact the secretariat for more information on how to earn ECTS credits by
-          participating in B-IDDE events.
-        </p>
+        <a class="ects-badge" href="https://promotion.charite.de/en/doctorate_environment/recognition" target="_blank">
+          <span class="ects-icon">🎓</span>
+          <span><strong>ECTS accredited</strong><br>Earn credits for attending – ask the <span class="ects-link">secretariat</span> for details.</span>
+        </a>
       </div>
       <div class="about-image">
         <img src="Pics/Background_bw.jpg" alt="Network visualization">
+        <div class="institution-nodes" aria-label="Member institutions">
+          <a class="inst-node" style="top:14%;left:22%;animation-delay:0.0s" href="https://www.charite.de/en/" target="_blank" title="Charité – Universitätsmedizin Berlin"><span class="inst-dot"></span>Charité</a>
+          <a class="inst-node" style="top:8%;left:60%;animation-delay:0.4s" href="https://pandemichub.who.int/" target="_blank" title="WHO Hub for Pandemic and Epidemic Intelligence"><span class="inst-dot"></span>WHO Pandemic Hub</a>
+          <a class="inst-node" style="top:30%;left:10%;animation-delay:0.8s" href="https://www.rki.de" target="_blank" title="Robert Koch Institute"><span class="inst-dot"></span>Robert Koch Institute</a>
+          <a class="inst-node" style="top:44%;left:52%;animation-delay:1.2000000000000002s" href="https://www.mpiib-berlin.mpg.de/" target="_blank" title="Max Planck Institute for Infection Biology"><span class="inst-dot"></span>MPI Infection Biology</a>
+          <a class="inst-node" style="top:70%;left:8%;animation-delay:1.6s" href="https://www.tu.berlin/" target="_blank" title="Technische Universität Berlin"><span class="inst-dot"></span>TU Berlin</a>
+          <a class="inst-node" style="top:80%;left:55%;animation-delay:2.0s" href="https://www.fu-berlin.de/" target="_blank" title="Freie Universität Berlin"><span class="inst-dot"></span>FU Berlin</a>
+          <a class="inst-node" style="top:90%;left:18%;animation-delay:2.4000000000000004s" href="https://www.hu-berlin.de/" target="_blank" title="Humboldt University of Berlin"><span class="inst-dot"></span>HU Berlin</a>
+        </div>
       </div>
     </section>
 
@@ -76,7 +95,7 @@
       <div class="events-grid" id="upcoming-events"></div>
 
       <h2>Past Events</h2>
-      <div class="events-grid" id="past-events"></div>
+      <div class="events-grid past-grid" id="past-events"></div>
 
       <div class="show-more-btn-container">
         <button id="show-more-past-events" class="show-more-btn">Show More</button>
@@ -188,45 +207,43 @@
      * Build event card HTML
      */
     function buildEventCard(event, isOlder = false) {
-      const dateStr = `${event.month} ${event.year}`;
+      const shortMonth = event.month.slice(0, 3);
       let html = `<div class="event-card${isOlder ? ' older-event hidden' : ''}">`;
-      html += `<div class="event-date">${dateStr}</div>`;
+      html += `<div class="event-date"><span class="event-date-badge"><span class="badge-month">${shortMonth}</span><span class="badge-year">${event.year}</span></span>`;
+      html += `<span class="event-place">${event.place}</span></div>`;
       html += `<div class="event-content">`;
 
       // Training section
       if (event.training) {
         const { title, instructors, link } = event.training;
-        if (link) {
-          html += `<a href="${link}" target="_blank" rel="noopener noreferrer" class="event-section-link">`;
-        }
-        html += `<div class="event-section"><strong>Training</strong>`;
-        html += `<div class="speaker-entry"><p>${instructors ? `<strong>${instructors}:</strong> ` : ''}${title}</p></div></div>`;
-        if (link) {
-          html += `</a>`;
-        }
+        html += buildSection('Training', [{ speaker: instructors, topic: title }], link);
       }
 
       // Seminar section
       if (event.seminar && event.seminar.length > 0) {
         const seminarLink = event.seminar.find(sem => sem.link)?.link;
-        if (seminarLink) {
-          html += `<a href="${seminarLink}" target="_blank" rel="noopener noreferrer" class="event-section-link">`;
-        }
-        html += `<div class="event-section"><strong>Seminar</strong>`;
-        event.seminar.forEach((sem, idx) => {
-          const speaker = sem.speaker || sem.instructors || '';
-          html += `<div class="speaker-entry"><p>${speaker ? `<strong>${speaker}:</strong> ` : ''}${sem.topic}</p></div>`;
-        });
-        html += `</div>`;
-        if (seminarLink) {
-          html += `</a>`;
-        }
+        const entries = event.seminar.map(sem => ({ speaker: sem.speaker || sem.instructors || '', topic: sem.topic }));
+        html += buildSection('Seminar', entries, seminarLink);
       }
 
-      // Place section
-      html += `<div class="event-section"><strong>Place</strong><p>${event.place}</p></div>`;
       html += `</div></div>`;
+      return html;
+    }
 
+    /**
+     * Build a training/seminar block; linked blocks get a visible "Materials" cue
+     */
+    function buildSection(label, entries, link) {
+      let html = link
+        ? `<a href="${link}" target="_blank" rel="noopener noreferrer" class="event-section-link">`
+        : '';
+      html += `<div class="event-section"><span class="section-tag section-tag-${label.toLowerCase()}">${label}</span>`;
+      entries.forEach(({ speaker, topic }) => {
+        html += `<div class="speaker-entry"><p>${speaker ? `<strong>${speaker}:</strong> ` : ''}${topic}</p></div>`;
+      });
+      if (link) html += `<span class="materials-cue">Materials →</span>`;
+      html += `</div>`;
+      if (link) html += `</a>`;
       return html;
     }
 
