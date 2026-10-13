@@ -48,8 +48,8 @@ const EVENTS_DATA = {
       "month": "January",
       "year": 2027,
       "training": {
-        "title": "AI Skills and Collaborative coding",
-        "instructors": "Billy Quilty"
+        "title": "using AI Skills for ID modelling / Collaborative coding in github / STAN",
+        "instructors": "tbc"
       },
       "seminar": [
         {
