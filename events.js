@@ -38,7 +38,7 @@ const EVENTS_DATA = {
           "speaker": "Hugo Soubrier"
         },
         {
-          "topic": "Risk of Bundibugyo importation via air travel",
+          "topic": "Airport-Level Exportation Risk of Ebola Virus Disease 2026",
           "speaker": "Sten de Schrijver"
         }
       ],
