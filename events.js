@@ -38,8 +38,8 @@ const EVENTS_DATA = {
           "speaker": "Hugo Soubrier"
         },
         {
-          "topic": "tbc",
-          "speaker": "tbc"
+          "topic": "Risk of Bundibugyo importation via air travel",
+          "speaker": "Sten de Schrijver"
         }
       ],
       "place": "Charité - Universitätsmedizin Berlin"
