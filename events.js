@@ -19,8 +19,8 @@ const EVENTS_DATA = {
           "speaker": "Justus Benzler"
         },
         {
-          "topic": "tbc",
-          "speaker": "tbc"
+          "topic": "Hitchhiker bias can distort inference of pathogen severity and pathogen–pathogen interactions from symptom-based surveillance: A modeling study",
+          "speaker": "Kiran Kumari"
         }
       ],
       "place": "Charité - Universitätsmedizin Berlin"
