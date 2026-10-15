@@ -1,6 +1,9 @@
 // B-IDDE Events Data
 // Simply edit this file to add, remove, or update events
-// The page will automatically load and organize them by date
+// The page will automatically load and organise them by date
+// Meetings default to the second Tuesday of the month. If a meeting falls on
+// another day, add a "date" field, e.g. "date": "2026-11-17"
+// Titles are in sentence case: capitalise only the first word, names and acronyms
 
 const EVENTS_DATA = {
   "events": [
@@ -15,15 +18,15 @@ const EVENTS_DATA = {
       },
       "seminar": [
         {
-          "topic": "Future Requirements and Opportunities for Universal and Frequent Testing - motivated by the German experience with the (imperfect) integration of lab- and community-based testing into an exposure notification app infrastructure",
+          "topic": "Future requirements and opportunities for universal and frequent testing, motivated by the German experience with the (imperfect) integration of lab- and community-based testing into an exposure notification app infrastructure",
           "speaker": "Justus Benzler"
         },
         {
-          "topic": "Hitchhiker bias can distort inference of pathogen severity and pathogen–pathogen interactions from symptom-based surveillance: A modeling study",
+          "topic": "Hitchhiker bias can distort inference of pathogen severity and pathogen–pathogen interactions from symptom-based surveillance: a modeling study",
           "speaker": "Kiran Kumari"
         }
       ],
-      "place": "Charité - Universitätsmedizin Berlin"
+      "place": "Charité – Universitätsmedizin Berlin"
     },
       {
       "month": "December",
@@ -34,21 +37,21 @@ const EVENTS_DATA = {
       },
       "seminar": [
         {
-          "topic": "Bundibugyo in DRC, current status, local context, and lessons learned (for modellers)",
+          "topic": "Bundibugyo in the DRC: current status, local context and lessons learned (for modellers)",
           "speaker": "Hugo Soubrier"
         },
         {
-          "topic": "Airport-Level Exportation Risk of Ebola Virus Disease 2026",
+          "topic": "Airport-level exportation risk of Ebola virus disease, 2026",
           "speaker": "Sten de Schrijver"
         }
       ],
-      "place": "Charité - Universitätsmedizin Berlin"
+      "place": "Charité – Universitätsmedizin Berlin"
     },
       {
       "month": "January",
       "year": 2027,
       "training": {
-        "title": "using AI Skills for ID modelling / Collaborative coding in github / STAN",
+        "title": "Using AI skills for ID modelling / collaborative coding in GitHub / Stan",
         "instructors": "tbc"
       },
       "seminar": [
@@ -61,7 +64,7 @@ const EVENTS_DATA = {
           "speaker": "tbc"
         }
       ],
-      "place": "Charité - Universitätsmedizin Berlin"
+      "place": "Charité – Universitätsmedizin Berlin"
     },
     {
       "month": "July",
@@ -73,22 +76,22 @@ const EVENTS_DATA = {
       },
       "seminar": [
         {
-          "topic": "Effectiveness and efficiency of pre-season administration of long-acting monoclonal antibodies for infants born to RSV vaccinated mothers: a modelling study",
+          "topic": "Effectiveness and efficiency of pre-season administration of long-acting monoclonal antibodies for infants born to RSV-vaccinated mothers: a modelling study",
           "speaker": "Julia Mayer"
         },
         {
-          "topic": "Towards Real-Time Evidence Synthesis for Public Health Emergencies: Early Application to the current Ebola Outbreak",
+          "topic": "Towards real-time evidence synthesis for public health emergencies: early application to the current Ebola outbreak",
           "speaker": "Steve Kerr"
         }
       ],
-      "place": "The WHO Pandemic Hub"
+      "place": "WHO Pandemic Hub"
     },
 
     {
       "month": "September",
       "year": 2026,
       "training": {
-        "title": "Reproducible, AI assisted modeling and data science projects",
+        "title": "Reproducible, AI-assisted modeling and data science projects",
         "instructors": "Andreas Handel",
         "link": "https://www.andreashandel.com/presentations/2026-09-BIDDE-tutorial/"
       },
@@ -99,49 +102,49 @@ const EVENTS_DATA = {
           "link": "https://www.andreashandel.com/presentations/2026-09-BIDDE-talk/"
         }
       ],
-      "place": "Charité - Universitätsmedizin Berlin"
+      "place": "Charité – Universitätsmedizin Berlin"
     },
     {
       "month": "October",
       "year": 2026,
       "training": {
         "title": "A tutorial on epidemic modeling with the R package pomp",
-        "instructors": "Matthieu Domenech de Cellès & MPI Team",
+        "instructors": "Matthieu Domenech de Cellès & MPI team",
         "link": "https://github.com/cakussmaul/pompWorkshop"
       },
       "seminar": [
         {
-          "topic": "U-shaped effects of humidity and the impact of misspecified weather-transmission relationships in epidemic models",
+          "topic": "U-shaped effects of humidity and the impact of misspecified weather–transmission relationships in epidemic models",
           "speaker": "Cana Kussmaul"
         },
         {
-          "topic": "The pitfalls of incidence-based time series regression for inferring the effects of  weather on infectious diseases",
+          "topic": "The pitfalls of incidence-based time series regression for inferring the effects of weather on infectious diseases",
           "speaker": "Pietro Gemo"
         }
       ],
-      "place": "Charité - Universitätsmedizin Berlin"
+      "place": "Charité – Universitätsmedizin Berlin"
     },
     {
       "month": "June",
       "year": 2026,
       "training": {
-        "title": "An Introduction to Health Economic Analyses in IDD",
+        "title": "An introduction to health economic analyses in IDD",
         "instructors": "Sebastian Gruhn & Ulrich Reinacher"
       },
       "seminar": [
         {
-          "topic": "Development of the MONID and GEMS: Beginnings and the current state",
+          "topic": "Development of MONID and GEMS: beginnings and the current state",
           "speaker": "Rafael Mikolajczyk"
         }
       ],
-      "place": "Charité - Universitätsmedizin Berlin"
+      "place": "Charité – Universitätsmedizin Berlin"
     },
     {
       "month": "May",
       "year": 2026,
       "training": {
-        "title": "Behind the Data: A Hands-On Introduction to What Data Scientists Need to Know About Infectious Disease Diagnostics",
-        "instructors": "Anna Fruehauf, Nadine Olk"
+        "title": "Behind the data: a hands-on introduction to what data scientists need to know about infectious disease diagnostics",
+        "instructors": "Anna Frühauf & Nadine Olk"
       },
       "seminar": [
         {
@@ -153,7 +156,7 @@ const EVENTS_DATA = {
           "speaker": "Vitaly Belik"
         }
       ],
-      "place": "Charité - Universitätsmedizin Berlin"
+      "place": "Charité – Universitätsmedizin Berlin"
     },
     {
       "month": "April",
@@ -165,57 +168,57 @@ const EVENTS_DATA = {
       },
       "seminar": [
         {
-          "topic": "Mathematical Modeling of Optimal Booster Vaccination Strategies for Mpox Control in Africa",
+          "topic": "Mathematical modeling of optimal booster vaccination strategies for mpox control in Africa",
           "speaker": "David Niyukuri"
         },
         {
-          "topic": "Better Data, Better Models: The Role of the WHO Digital Adaptation Kit for Infectious Disease Surveillance",
-          "speaker": "Opeayo OGUNDIRAN"
+          "topic": "Better data, better models: the role of the WHO Digital Adaptation Kit for infectious disease surveillance",
+          "speaker": "Opeayo Ogundiran"
         }
       ],
-      "place": "Charité - Universitätsmedizin Berlin"
+      "place": "Charité – Universitätsmedizin Berlin"
     },
     {
       "month": "March",
       "year": 2026,
       "training": {
-        "title": "Introduction to Phylogenetic inference",
-        "instructors": "Matej Kritznar",
+        "title": "Introduction to phylogenetic inference",
+        "instructors": "Matej Kriznar",
         "link": "https://github.com/ccgh-idd/Phylogenetics-Workshop"
       },
       "seminar": [
         {
-          "topic": "Automating the extraction of linelist and contact data from Ebola outbreak narratives using LLMs",
+          "topic": "Automating the extraction of line list and contact data from Ebola outbreak narratives using LLMs",
           "speaker": "Billy Quilty"
         },
         {
-          "topic": "Behavior change and infection induced immunity led to the decline of the 2022 Mpox outbreak in Berlin",
+          "topic": "Behavior change and infection-induced immunity led to the decline of the 2022 mpox outbreak in Berlin",
           "speaker": "Nils Gubela"
         }
       ],
-      "place": "The WHO Pandemic Hub"
+      "place": "WHO Pandemic Hub"
     },
     {
       "month": "February",
       "year": 2026,
       "training": {
-        "title": "Introduction to RShiny",
+        "title": "Introduction to R Shiny",
         "instructors": "Hugo Soubrier",
         "link": "https://github.com/ccgh-idd/shiny-intro"
       },
       "seminar": [
         {
-          "topic": "Beyond Hype: The Real Promise of AI in Infectious Disease",
+          "topic": "Beyond hype: the real promise of AI in infectious disease",
           "speaker": "Samir Bhatt"
         }
       ],
-      "place": "Charité - Universitätsmedizin Berlin"
+      "place": "Charité – Universitätsmedizin Berlin"
     },
     {
       "month": "January",
       "year": 2026,
       "training": {
-        "title": "ODIN2 for model fitting",
+        "title": "odin2 for model fitting",
         "instructors": "Julia Mayer",
         "link": "https://github.com/ccgh-idd/odin-monty-training"
       },
@@ -225,7 +228,7 @@ const EVENTS_DATA = {
           "speaker": "Kathleen O'Reilly"
         }
       ],
-      "place": "Charité - Universitätsmedizin Berlin"
+      "place": "Charité – Universitätsmedizin Berlin"
     },
     {
       "month": "December",
@@ -241,13 +244,13 @@ const EVENTS_DATA = {
           "speaker": "Lone Simonsen"
         }
       ],
-      "place": "The WHO Pandemic Hub"
+      "place": "WHO Pandemic Hub"
     },
     {
       "month": "November",
       "year": 2025,
       "training": {
-        "title": "Epiverse for Outbreak Analyses",
+        "title": "Epiverse for outbreak analyses",
         "instructors": "Carmen Tamayo Cuartero",
         "link": "https://epiverse-trace.github.io/learn.html"
       },
@@ -257,8 +260,8 @@ const EVENTS_DATA = {
           "speaker": "Felix Günther"
         },
         {
-          "topic": "Data collection of the health-related quality of life (HRQoL) and social mixing using contact surveys",
-          "instructors": "Francisco Pozo Martin and Mathilde Grimée"
+          "topic": "Collecting data on health-related quality of life (HRQoL) and social mixing using contact surveys",
+          "speaker": "Francisco Pozo Martin & Mathilde Grimée"
         }
       ],
       "place": "Robert Koch Institute"
@@ -268,7 +271,7 @@ const EVENTS_DATA = {
       "year": 2025,
       "training": {
         "title": "Docker",
-        "instructors": "Matej Kritznar"
+        "instructors": "Matej Kriznar"
       },
       "seminar": [
         {
@@ -280,7 +283,7 @@ const EVENTS_DATA = {
           "speaker": "Anabelle Wong"
         }
       ],
-      "place": "Charité - Universitätsmedizin Berlin"
+      "place": "Charité – Universitätsmedizin Berlin"
     },
     {
       "month": "September",
@@ -288,11 +291,11 @@ const EVENTS_DATA = {
       "training": null,
       "seminar": [
         {
-          "topic": "IgG and Correlates of Protection for the Pneumococcus: A 25th anniversary re-evaluation.",
+          "topic": "IgG and correlates of protection for the pneumococcus: a 25th anniversary re-evaluation",
           "speaker": "David Goldblatt"
         }
       ],
-      "place": "Charité - Universitätsmedizin Berlin"
+      "place": "Charité – Universitätsmedizin Berlin"
     },
     {
       "month": "July",
@@ -300,15 +303,15 @@ const EVENTS_DATA = {
       "training": null,
       "seminar": [
         {
-          "topic": "Reconstructing in-host kinetics in response to (COVID) vaccination",
+          "topic": "Reconstructing in-host kinetics in response to COVID-19 vaccination",
           "speaker": "David Hodgson"
         },
         {
-          "topic": "Who infects infants with Pertussis, a transfer entropy approach.",
+          "topic": "Who infects infants with pertussis? A transfer entropy approach",
           "speaker": "Michael Briga"
         }
       ],
-      "place": "Charité - Universitätsmedizin Berlin"
+      "place": "Charité – Universitätsmedizin Berlin"
     },
     {
       "month": "June",
@@ -320,7 +323,7 @@ const EVENTS_DATA = {
           "speaker": "Matthieu Domenech de Cellès"
         }
       ],
-      "place": "Max Planck Institute"
+      "place": "Max Planck Institute for Infection Biology"
     },
     {
       "month": "April",
@@ -328,15 +331,15 @@ const EVENTS_DATA = {
       "training": null,
       "seminar": [
         {
-          "topic": "optimal RSV vaccination strategies in Japan",
+          "topic": "Optimal RSV vaccination strategies in Japan",
           "speaker": "Ayaka Monoi"
         },
         {
-          "topic": "EPI -parameter community and our grEPI project",
+          "topic": "The epiparameter community and our grEPI project",
           "speaker": "Chloe Rice"
         }
       ],
-      "place": "The WHO Pandemic Hub"
+      "place": "WHO Pandemic Hub"
     },
     {
       "month": "February",
@@ -344,11 +347,11 @@ const EVENTS_DATA = {
       "training": null,
       "seminar": [
         {
-          "topic": "accessing models via APIs in R, python, or through specialised LLM GUIs",
+          "topic": "Accessing models via APIs in R or Python, or through specialised LLM interfaces",
           "speaker": "Billy Quilty"
         },
         {
-          "topic": "using github copilot for RStudio",
+          "topic": "Using GitHub Copilot in RStudio",
           "speaker": "Stefan Flasche"
         },
         {
@@ -356,7 +359,7 @@ const EVENTS_DATA = {
           "speaker": "Kaige Dong"
         }
       ],
-      "place": "Charité - Universitätsmedizin Berlin"
+      "place": "Charité – Universitätsmedizin Berlin"
     },
     {
       "month": "December",
@@ -364,11 +367,11 @@ const EVENTS_DATA = {
       "training": null,
       "seminar": [
         {
-          "topic": "Charite on outbreaks response",
-          "speaker": "Billy and Hugo"
+          "topic": "Charité on outbreak response",
+          "speaker": "Billy Quilty & Hugo Soubrier"
         }
       ],
-      "place": "Charité - Universitätsmedizin Berlin"
+      "place": "Charité – Universitätsmedizin Berlin"
     },
     {
       "month": "November",
@@ -376,15 +379,15 @@ const EVENTS_DATA = {
       "training": null,
       "seminar": [
         {
-          "topic": "Malaria modelling needs/ideas",
+          "topic": "Malaria modelling needs and ideas",
           "speaker": "Welmoed van Loon"
         },
         {
           "topic": "Arbovirus modelling overview",
-          "instructors": "Carlo Fischer & Anna Frühauf"
+          "speaker": "Carlo Fischer & Anna Frühauf"
         }
       ],
-      "place": "Charité - Universitätsmedizin Berlin"
+      "place": "Charité – Universitätsmedizin Berlin"
     },
     {
       "month": "October",
@@ -392,10 +395,10 @@ const EVENTS_DATA = {
       "training": null,
       "seminar": [
         {
-          "topic": "Inaugural to discuss format"
+          "topic": "Inaugural meeting to discuss the format"
         }
       ],
-      "place": "Charité - Universitätsmedizin Berlin"
+      "place": "Charité – Universitätsmedizin Berlin"
     }
   ]
 };
