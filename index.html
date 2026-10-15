@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 
 <head>
   <meta charset="UTF-8">
@@ -10,207 +10,248 @@
   <link rel="icon" type="image/png" href="Pics/Favicon.png">
   <meta property="og:title" content="B-IDDE – Berlin Infectious Disease Dynamics Expertise Network">
   <meta property="og:description" content="Monthly training and seminars for Berlin's infectious disease modelling community.">
-  <meta property="og:image" content="https://bidde.ccgh-idd.de/Pics/Hero.JPG">
+  <meta property="og:image" content="https://bidde.ccgh-idd.de/Pics/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://bidde.ccgh-idd.de/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=1.8">
-  <script src="events.js?v=1.2"></script>
+  <link rel="stylesheet" href="styles.css?v=3.7">
+  <!-- Deferred: runs before DOMContentLoaded, when the inline script reads EVENTS_DATA -->
+  <script src="events.js?v=1.6" defer></script>
+  <!-- Hero map: the D3 modules it needs, self-hosted in vendor/ (same files as the IDD globe) -->
+  <script src="vendor/d3-array.v3.2.4.min.js" defer></script>
+  <script src="vendor/d3-geo.v3.1.1.min.js" defer></script>
+  <script src="vendor/d3-selection.v3.0.0.min.js" defer></script>
+  <script src="berlin-map.js?v=2" defer></script>
 </head>
 
 <body>
-  <header>
-    <img src="Pics/logo.png" alt="B-IDDE Logo" class="header-logo">
-    <nav id="nav-menu">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#events">Events</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-nav">
+    <div class="container nav-content">
+      <a href="#home" class="logo"><img src="Pics/logo-small.webp" alt="B-IDDE logo" width="209" height="112"></a>
+      <button class="hamburger" id="hamburger-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav-menu">
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#past">Past meetings</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero Section -->
+  <main id="main">
+
   <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Berlin Infectious Disease Dynamics Expertise Network<br>B-IDDE</h1>
-      <p class="hero-tagline">Monthly training and seminars for Berlin's infectious disease modelling community</p>
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>B-IDDE</h1>
+        <p class="lead">Monthly training and seminars for Berlin's infectious disease modelling community.</p>
+        <dl class="hero-facts">
+          <div>
+            <dt>Next meeting</dt>
+            <dd id="next-meeting"><a href="#events">See events</a></dd>
+          </div>
+          <div>
+            <dt>Members</dt>
+            <dd>More than 60</dd>
+          </div>
+          <div>
+            <dt>Credits</dt>
+            <dd><a href="https://promotion.charite.de/en/doctorate_environment/recognition" target="_blank" rel="noopener">ECTS accredited</a></dd>
+          </div>
+        </dl>
+      </div>
+      <figure class="hero-figure">
+        <!-- Map of Berlin with member institutions at their real locations, drawn by berlin-map.js -->
+        <div class="network-image" id="berlin-map"></div>
+        <figcaption>Member institutions across Berlin. Map data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>.</figcaption>
+      </figure>
     </div>
   </section>
 
-  <main>
-
     <section id="about" class="section">
-      <div class="about-text">
-        <h2>About the Network</h2>
-        <p>
-          B-IDDE is a <mark>Berlin-based interdisciplinary network</mark> connecting researchers working on infectious disease
-          dynamics, epidemiological modelling, data science, phylodynamics, and policy-relevant outbreak analysis.
-        </p>
-        <p>
-          B-IDDE brings together researchers across Berlin with expertise and / or interest in infectious disease
-          modelling, data analysis, and outbreak analytics. We are currently a group of <mark>more than 60 members</mark> from
-          universities, research institutes and public health organisations across the city.
-        </p>
-        <p>
-          The network is <mark>open to all researchers</mark> working on infectious disease dynamics in Berlin, including those from
-          academia, public health institutions, and other relevant organizations. We welcome members with a wide range of
-          expertise, including epidemiological modelling, data science, phylodynamics, and policy-relevant outbreak
-          analysis.
-        </p>
-        <p>
-          The main activity of the network is <mark>monthly meetings</mark>, which consist of a <mark>training session followed by a seminar</mark>.
-          The training sessions cover a range of research skills needed in infectious disease dynamics. The seminars feature
-          presentations from members of the network as well as regular invited speakers on current research and
-          policy-relevant topics in the field.
-        </p>
-        <a class="ects-badge" href="https://promotion.charite.de/en/doctorate_environment/recognition" target="_blank">
-          <span class="ects-icon">🎓</span>
-          <span><strong>ECTS accredited</strong><br>Earn credits for attending – ask the <span class="ects-link">secretariat</span> for details.</span>
-        </a>
-      </div>
-      <div class="about-image">
-        <img src="Pics/Background_bw.jpg" alt="Network visualization">
-        <div class="institution-nodes" aria-label="Member institutions">
-          <a class="inst-node" style="top:14%;left:22%;animation-delay:0.0s" href="https://www.charite.de/en/" target="_blank" title="Charité – Universitätsmedizin Berlin"><span class="inst-dot"></span>Charité</a>
-          <a class="inst-node" style="top:8%;left:60%;animation-delay:0.4s" href="https://pandemichub.who.int/" target="_blank" title="WHO Hub for Pandemic and Epidemic Intelligence"><span class="inst-dot"></span>WHO Pandemic Hub</a>
-          <a class="inst-node" style="top:30%;left:10%;animation-delay:0.8s" href="https://www.rki.de" target="_blank" title="Robert Koch Institute"><span class="inst-dot"></span>Robert Koch Institute</a>
-          <a class="inst-node" style="top:44%;left:52%;animation-delay:1.2000000000000002s" href="https://www.mpiib-berlin.mpg.de/" target="_blank" title="Max Planck Institute for Infection Biology"><span class="inst-dot"></span>MPI Infection Biology</a>
-          <a class="inst-node" style="top:70%;left:8%;animation-delay:1.6s" href="https://www.tu.berlin/" target="_blank" title="Technische Universität Berlin"><span class="inst-dot"></span>TU Berlin</a>
-          <a class="inst-node" style="top:80%;left:55%;animation-delay:2.0s" href="https://www.fu-berlin.de/" target="_blank" title="Freie Universität Berlin"><span class="inst-dot"></span>FU Berlin</a>
-          <a class="inst-node" style="top:90%;left:18%;animation-delay:2.4000000000000004s" href="https://www.hu-berlin.de/" target="_blank" title="Humboldt University of Berlin"><span class="inst-dot"></span>HU Berlin</a>
+      <div class="container section-grid">
+        <h2>About the network</h2>
+        <div class="section-body">
+          <div class="prose">
+            <p>B-IDDE is a Berlin-based interdisciplinary network connecting researchers working on infectious disease
+              dynamics, epidemiological modelling, data science, phylodynamics and policy-relevant outbreak analysis.</p>
+            <p>B-IDDE brings together researchers across Berlin with expertise or interest in infectious disease
+              modelling, data analysis and outbreak analytics. We are currently a group of more than 60 members from
+              universities, research institutes and public health organisations across the city.</p>
+            <p>The network is open to all researchers working on infectious disease dynamics in Berlin, including those
+              from academia, public health institutions and other relevant organisations. We welcome members with a wide
+              range of expertise, including epidemiological modelling, data science, phylodynamics and policy-relevant
+              outbreak analysis.</p>
+            <p>The main activity of the network is monthly meetings, which consist of a training session followed by a
+              seminar. The training sessions cover a range of research skills needed in infectious disease dynamics. The
+              seminars feature presentations from members of the network as well as regular invited speakers on current
+              research and policy-relevant topics in the field.</p>
+            <p>Attendance is <a href="https://promotion.charite.de/en/doctorate_environment/recognition" target="_blank" rel="noopener">ECTS accredited</a>; ask the secretariat for details.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="events" class="section">
-      <h2>Upcoming Events</h2>
-      <div class="events-grid" id="upcoming-events"></div>
+      <div class="container section-grid">
+        <h2>Events</h2>
+        <div class="section-body">
+          <div class="prose events-intro">
+            <p>Meetings are usually held on the second Tuesday of the month. To receive calendar invitations, email the
+              <a href="mailto:stefan.flasche@charite.de?subject=B-IDDE%20calendar%20invitations">B-IDDE secretariat</a>.</p>
+          </div>
+          <h3 class="list-heading">Next meeting</h3>
+          <div class="next-event" id="next-event"></div>
 
-      <h2>Past Events</h2>
-      <div class="events-grid past-grid" id="past-events"></div>
-
-      <div class="show-more-btn-container">
-        <button id="show-more-past-events" class="show-more-btn">Show More</button>
+          <div id="later-block">
+            <h3 class="list-heading">Later meetings</h3>
+            <ol class="event-list" id="upcoming-events"></ol>
+          </div>
+        </div>
       </div>
+    </section>
 
+    <section id="past" class="section">
+      <div class="container section-grid">
+        <h2>Past meetings</h2>
+        <div class="section-body">
+          <ol class="event-list past-list" id="past-events"></ol>
+          <button id="show-more-past-events" class="text-button" type="button" aria-expanded="false" aria-controls="past-events">Show older meetings</button>
+        </div>
+      </div>
     </section>
 
     <section id="contact" class="section">
-      <h2>Contact</h2>
-      <div class="contact-content">
-        <div class="contact-text">
-          <p>If you wish to join the network please contact the <a href="mailto:stefan.flasche@charite.de">B-IDDE secretariat</a>.</p>
-          <p>The secretariat is supported by the <a href="https://www.einsteinfoundation.de/en/" target="_blank">Einstein Foundation</a> and the <a href="https://www.berlin-university-alliance.de/en/" target="_blank">Berlin University Alliance</a></p>
-        </div>
-        <div class="contact-logos-box">
-          <img src="Pics/Einstein_logo.png" alt="Einstein Foundation logo" class="supporter-logo">
-          <img src="Pics/BUA_logo.webp" alt="Berlin University Alliance logo" class="supporter-logo">
+      <div class="container section-grid">
+        <h2>Contact</h2>
+        <div class="section-body contact-content">
+          <div class="prose">
+            <p>If you wish to join the network or receive calendar invitations for the meetings, please contact the <a href="mailto:stefan.flasche@charite.de">B-IDDE secretariat</a>.</p>
+            <p>The secretariat is supported by the <a href="https://www.einsteinfoundation.de/en/" target="_blank" rel="noopener">Einstein Foundation</a> and the <a href="https://www.berlin-university-alliance.de/en/" target="_blank" rel="noopener">Berlin University Alliance</a>.</p>
+          </div>
+          <div class="supporter-logos">
+            <img src="Pics/Einstein_logo.png" alt="Einstein Foundation logo" width="242" height="243">
+            <img src="Pics/BUA_logo.webp" alt="Berlin University Alliance logo" width="1080" height="567">
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- Full-width photo band closing the page -->
+    <figure class="photo-band">
+      <img src="Pics/Hero-band.webp"
+        srcset="Pics/Hero-band-800.webp 800w, Pics/Hero-band-1200.webp 1200w, Pics/Hero-band.webp 2000w"
+        sizes="100vw" width="2000" height="824" alt="B-IDDE members at a network meeting" loading="lazy"
+        decoding="async">
+    </figure>
+
   </main>
-  <footer>
-    <div class="footer-logo-wrap">
-      <img src="Pics/logo.png" alt="B-IDDE logo" class="footer-logo">
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <img src="Pics/logo-small.webp" alt="B-IDDE logo" class="footer-logo" width="209" height="112">
+      <div>
+        <p class="footer-title">Berlin Infectious Disease Dynamics Expertise Network</p>
+        <p>Secretariat hosted by the <a href="https://ccgh-idd.de/" target="_blank" rel="noopener">Infectious Disease Dynamics group</a>, Charité Center for Global Health</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="mailto:stefan.flasche@charite.de">Join the network</a></li>
+        <li><a href="#events">Upcoming meetings</a></li>
+        <li><a href="#past">Past meetings</a></li>
+      </ul>
     </div>
-    <div>© B-IDDE – Berlin Infectious Disease Dynamics Expertise Network</div>
   </footer>
 
   <script>
-    // ===== Navigation & Header =====
+    // ===== Navigation =====
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const navMenu = document.getElementById('nav-menu');
-    const navLinks = navMenu.querySelectorAll('a');
 
-    hamburgerBtn.addEventListener('click', () => {
-      hamburgerBtn.classList.toggle('active');
-      navMenu.classList.toggle('active');
+    function setMenuOpen(isOpen) {
+      navMenu.classList.toggle('active', isOpen);
+      hamburgerBtn.classList.toggle('active', isOpen);
+      hamburgerBtn.setAttribute('aria-expanded', isOpen);
+    }
+
+    hamburgerBtn.addEventListener('click', () => setMenuOpen(!navMenu.classList.contains('active')));
+
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => setMenuOpen(false));
     });
 
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        hamburgerBtn.classList.remove('active');
-        navMenu.classList.remove('active');
+    // Escape closes the open menu and returns focus to the menu button
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Escape' || !navMenu.classList.contains('active')) return;
+      setMenuOpen(false);
+      hamburgerBtn.focus();
+    });
+
+    // Mark the nav link of the section currently on screen
+    const navTargets = [...navMenu.querySelectorAll('a')]
+      .map(link => ({ link, section: document.querySelector(link.getAttribute('href')) }))
+      .filter(t => t.section);
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        navTargets.forEach(t => t.link.classList.toggle('current', t.section === entry.target));
       });
-    });
-
-    // ===== Header Scroll Behavior =====
-    let lastScrollTop = 0;
-    const header = document.querySelector('header');
-
-    window.addEventListener('scroll', function () {
-      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-      if (currentScroll > lastScrollTop && currentScroll > 100) {
-        header.classList.add('hide');
-      } else {
-        header.classList.remove('hide');
-      }
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-    });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    navTargets.forEach(t => sectionObserver.observe(t.section));
 
     // ===== Event Management =====
-    
-    /**
-     * Parse month name and year to {month, year}
-     */
-    function parseEventDate(month, year) {
-      const months = {
-        'january': 1, 'february': 2, 'march': 3, 'april': 4,
-        'may': 5, 'june': 6, 'july': 7, 'august': 8,
-        'september': 9, 'october': 10, 'november': 11, 'december': 12
-      };
-      const monthNum = months[month.toLowerCase()];
-      return { month: monthNum, year, date: new Date(year, monthNum - 1, 1) };
-    }
+
+    // Every events.js value is escaped before it goes into innerHTML, so a "<" or "&" in a title shows as typed
+    const escapeHtml = value => String(value ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
 
     /**
-     * Get current month and year
+     * Meeting date: the "date" field ("2026-11-10") if given, otherwise the
+     * second Tuesday of the month, when meetings are usually held
      */
-    function getCurrentMonthYear() {
-      const now = new Date();
-      return {
-        month: now.getMonth() + 1,
-        year: now.getFullYear(),
-        date: new Date(now.getFullYear(), now.getMonth(), 1)
-      };
+    const monthNames = ['january', 'february', 'march', 'april', 'may', 'june',
+      'july', 'august', 'september', 'october', 'november', 'december'];
+
+    function getEventDate(event) {
+      if (event.date) return new Date(`${event.date}T00:00`);
+      const monthIndex = monthNames.indexOf(String(event.month).trim().toLowerCase());
+      if (monthIndex < 0) return new Date(NaN);
+      const first = new Date(event.year, monthIndex, 1);
+      const firstTuesday = 1 + (2 - first.getDay() + 7) % 7;
+      return new Date(event.year, monthIndex, firstTuesday + 7);
     }
 
-    /**
-     * Classify event as upcoming or past
-     * Events are marked as past on the 15th of their month
-     */
-    function classifyEvent(eventDate, currentDate) {
-      const now = new Date();
-      const currentDay = now.getDate();
-      
-      if (eventDate.year > currentDate.year) return 'upcoming';
-      if (eventDate.year < currentDate.year) return 'past';
-      
-      // Same year - check month and day
-      if (eventDate.month > currentDate.month) return 'upcoming';
-      if (eventDate.month < currentDate.month) return 'past';
-      
-      // Same month - check if current day is past the 15th
-      return currentDay <= 15 ? 'upcoming' : 'past';
+    // A meeting stays upcoming until the end of its day
+    function isUpcoming(date) {
+      const endOfDay = new Date(date);
+      endOfDay.setDate(endOfDay.getDate() + 1);
+      return new Date() < endOfDay;
     }
 
+    // "Tuesday 10 November 2026" and "Tue 10 November", built from parts so no browser adds a comma
+    const datePart = (date, options) => date.toLocaleDateString('en-GB', options);
+    // In narrow columns the line breaks after the weekday, never inside "10 November 2026"
+    const formatFullDate = date => `${datePart(date, { weekday: 'long' })} <span class="nowrap">${date.getDate()} ` +
+      `${datePart(date, { month: 'long' })} ${date.getFullYear()}</span>`;
+    const formatShortDate = date => `${datePart(date, { weekday: 'short' })} ${date.getDate()} ` +
+      `${datePart(date, { month: 'long' })}`;
+
     /**
-     * Build event card HTML
+     * Build one event: date and venue on the left, sessions on the right.
+     * Upcoming events are list items; the next meeting is a standalone block.
      */
-    function buildEventCard(event, isOlder = false) {
-      const shortMonth = event.month.slice(0, 3);
-      let html = `<div class="event-card${isOlder ? ' older-event hidden' : ''}">`;
-      html += `<div class="event-date"><span class="event-date-badge"><span class="badge-month">${shortMonth}</span><span class="badge-year">${event.year}</span></span>`;
-      html += `<span class="event-place">${event.place}</span></div>`;
+    function buildEventItem(event, { isOlder = false, tag = 'li' } = {}) {
+      let html = `<${tag} class="event-item${isOlder ? ' older-event hidden' : ''}">`;
+      html += `<div class="event-date"><span class="event-month">${formatFullDate(event.eventDate)}</span>`;
+      html += `<span class="event-place">${escapeHtml(event.place)}</span></div>`;
       html += `<div class="event-content">`;
 
       // Training section
@@ -226,24 +267,51 @@
         html += buildSection('Seminar', entries, seminarLink);
       }
 
-      html += `</div></div>`;
+      html += `</div></${tag}>`;
       return html;
     }
 
     /**
-     * Build a training/seminar block; linked blocks get a visible "Materials" cue
+     * Build a compact past-meeting row: one line per talk, session type inline
+     */
+    function buildPastItem(event, isOlder = false) {
+      const talks = [];
+      if (event.training) {
+        const { title, instructors, link } = event.training;
+        talks.push({ label: 'Training', speaker: instructors, topic: title, link });
+      }
+      (event.seminar || []).forEach(sem => {
+        talks.push({ label: 'Seminar', speaker: sem.speaker || sem.instructors || '', topic: sem.topic, link: sem.link });
+      });
+
+      let html = `<li class="event-item${isOlder ? ' older-event hidden' : ''}">`;
+      html += `<div class="event-date"><span class="event-month">${escapeHtml(event.month)} ${escapeHtml(event.year)}</span>`;
+      html += `<span class="event-place">${escapeHtml(event.place)}</span></div><div class="event-content">`;
+      talks.forEach(({ label, speaker, topic, link }) => {
+        const title = link
+          ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(topic)}</a>`
+          : escapeHtml(topic);
+        html += `<p class="past-talk"><span class="inline-tag">${label}</span>`;
+        html += `<span>${speaker ? `<span class="past-speaker">${escapeHtml(speaker)}</span>` : ''}${title}</span></p>`;
+      });
+      html += `</div></li>`;
+      return html;
+    }
+
+    /**
+     * Build a training/seminar block; linked blocks get a "Materials" link
      */
     function buildSection(label, entries, link) {
-      let html = link
-        ? `<a href="${link}" target="_blank" rel="noopener noreferrer" class="event-section-link">`
-        : '';
-      html += `<div class="event-section"><span class="section-tag section-tag-${label.toLowerCase()}">${label}</span>`;
+      let html = `<div class="event-section"><span class="section-tag">${label}</span>`;
       entries.forEach(({ speaker, topic }) => {
-        html += `<div class="speaker-entry"><p>${speaker ? `<strong>${speaker}:</strong> ` : ''}${topic}</p></div>`;
+        // Unconfirmed slots are entered as "tbc" for both speaker and topic
+        const text = speaker === 'tbc' && topic === 'tbc'
+          ? 'To be confirmed'
+          : `${speaker && speaker !== 'tbc' ? `<strong>${escapeHtml(speaker)}:</strong> ` : ''}${escapeHtml(topic)}`;
+        html += `<p class="speaker-entry">${text}</p>`;
       });
-      if (link) html += `<span class="materials-cue">Materials →</span>`;
+      if (link) html += `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer" class="materials-link">Materials</a>`;
       html += `</div>`;
-      if (link) html += `</a>`;
       return html;
     }
 
@@ -251,34 +319,38 @@
      * Load and render events from events.js
      */
     function loadAndRenderEvents() {
-      const events = EVENTS_DATA.events;
-      const currentDate = getCurrentMonthYear();
-
       const upcomingEvents = [];
       const pastEvents = [];
 
-      // Classify events
-      events.forEach(event => {
-        const eventDate = parseEventDate(event.month, event.year);
-        if (classifyEvent(eventDate, currentDate) === 'upcoming') {
-          upcomingEvents.push({ ...event, eventDate });
-        } else {
-          pastEvents.push({ ...event, eventDate });
+      // Classify events, skipping any whose month or date cannot be read
+      EVENTS_DATA.events.forEach(event => {
+        const eventDate = getEventDate(event);
+        if (isNaN(eventDate)) {
+          console.warn('B-IDDE: skipped event with an unreadable date', event);
+          return;
         }
+        (isUpcoming(eventDate) ? upcomingEvents : pastEvents).push({ ...event, eventDate });
       });
 
       // Sort events
-      upcomingEvents.sort((a, b) => a.eventDate.date - b.eventDate.date);
-      pastEvents.sort((a, b) => b.eventDate.date - a.eventDate.date);
+      upcomingEvents.sort((a, b) => a.eventDate - b.eventDate);
+      pastEvents.sort((a, b) => b.eventDate - a.eventDate);
 
-      // Render events
-      const upcomingContainer = document.getElementById('upcoming-events');
-      const pastContainer = document.getElementById('past-events');
+      // Render events: the next meeting on its own, later ones soonest first, past ones newest first
+      const [next, ...later] = upcomingEvents;
+      document.getElementById('next-event').innerHTML = next
+        ? buildEventItem(next, { tag: 'div' })
+        : '<p class="event-empty">The next meeting will be announced soon.</p>';
+      document.getElementById('upcoming-events').innerHTML = later.map(e => buildEventItem(e)).join('');
+      document.getElementById('later-block').hidden = later.length === 0;
+      document.getElementById('past-events').innerHTML = pastEvents.map((e, idx) => buildPastItem(e, idx >= 6)).join('');
 
-      upcomingContainer.innerHTML = upcomingEvents.map(e => buildEventCard(e)).join('');
-      pastContainer.innerHTML = pastEvents.map((e, idx) => buildEventCard(e, idx >= 6)).join('');
+      // Next meeting in the hero facts
+      if (next) {
+        document.getElementById('next-meeting').innerHTML =
+          `<a href="#events">${formatShortDate(next.eventDate)}</a>`;
+      }
 
-      // Setup show-more button
       setupShowMoreButton();
     }
 
@@ -286,26 +358,24 @@
      * Setup show-more button functionality
      */
     function setupShowMoreButton() {
-      const showMoreBtn = document.getElementById("show-more-past-events");
-      const olderEvents = document.querySelectorAll(".older-event");
+      const showMoreBtn = document.getElementById('show-more-past-events');
+      const olderEvents = document.querySelectorAll('.older-event');
 
-      if (showMoreBtn && olderEvents.length > 0) {
-        showMoreBtn.addEventListener("click", function () {
-          const isHidden = olderEvents[0].classList.contains("hidden");
-          olderEvents.forEach(event => {
-            if (isHidden) {
-              event.classList.remove("hidden");
-            } else {
-              event.classList.add("hidden");
-            }
-          });
-          showMoreBtn.innerText = isHidden ? "Show Less" : "Show More";
-        });
+      if (olderEvents.length === 0) {
+        showMoreBtn.hidden = true;
+        return;
       }
+
+      showMoreBtn.addEventListener('click', function () {
+        const isHidden = olderEvents[0].classList.contains('hidden');
+        olderEvents.forEach(event => event.classList.toggle('hidden', !isHidden));
+        showMoreBtn.setAttribute('aria-expanded', isHidden);
+        showMoreBtn.textContent = isHidden ? 'Show fewer' : 'Show older meetings';
+      });
     }
 
     // Load events when page loads
-    document.addEventListener("DOMContentLoaded", loadAndRenderEvents);
+    document.addEventListener('DOMContentLoaded', loadAndRenderEvents);
   </script>
 </body>
 
