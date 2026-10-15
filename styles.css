@@ -355,7 +355,7 @@ nav a.current {
   padding: 3px 8px;
   background: var(--bg);
   border: 1px solid var(--rule);
-  border-radius: 4px;
+  border-radius: 0;
   font-size: 0.8rem;
   font-weight: 400;
   white-space: nowrap;
@@ -480,14 +480,24 @@ nav a.current {
   content: ' →';
 }
 
-/* Next meeting: full detail, a heavier red rule and slightly larger text */
-.next-event {
+/* Next and later meetings are cards: square corners, a hairline border and no shadow.
+   The next meeting carries a red top edge and slightly larger text. */
+.next-event .event-item {
+  padding: 28px;
+  border: 1px solid var(--rule);
   border-top: 2px solid var(--accent);
+  font-size: 1.0625rem;
 }
 
-.next-event .event-item {
-  padding: 28px 0 32px;
-  font-size: 1.0625rem;
+#upcoming-events {
+  display: grid;
+  gap: 16px;
+  border-top: 0;
+}
+
+#upcoming-events .event-item {
+  padding: 24px;
+  border: 1px solid var(--rule);
 }
 
 .next-event .event-month {
@@ -701,6 +711,11 @@ nav a.current {
   .event-item {
     grid-template-columns: 1fr;
     gap: 8px;
+  }
+
+  .next-event .event-item,
+  #upcoming-events .event-item {
+    padding: 20px 16px;
   }
 
   /* Footer links stacked with 44px hit areas */
