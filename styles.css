@@ -43,17 +43,21 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* No bold text anywhere: hierarchy comes from size and colour */
+/* Headings, titles, labels and navigation are regular weight: hierarchy comes from size and colour.
+   Bold is kept only for emphasis inside running text (strong, b). */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-strong,
-b,
 th {
   font-weight: 400;
+}
+
+strong,
+b {
+  font-weight: 600;
 }
 
 h1,
@@ -460,7 +464,6 @@ nav a.current {
 }
 
 .speaker-entry strong {
-  font-weight: 400;
   color: var(--primary);
 }
 
