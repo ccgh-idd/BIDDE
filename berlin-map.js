@@ -18,11 +18,9 @@ const institutions = [
     if (!box || !window.d3) return;
 
     const W = 1000, H = 860;
-    let data;
-    try {
-        data = await (await fetch('berlin.json?v=1')).json();
-    } catch (err) {
-        console.warn('B-IDDE: could not load the Berlin map data', err);
+    const data = window.BERLIN_GEO;
+    if (!data) {
+        console.warn('B-IDDE: Berlin map data (berlin-data.js) not loaded');
         return;
     }
     const ofKind = (...kinds) => data.features.filter(f => kinds.includes(f.properties.kind));

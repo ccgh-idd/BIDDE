@@ -16,9 +16,14 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=1.8">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3.0">
   <script src="events.js?v=1.2"></script>
+  <script src="vendor/d3-array.v3.2.4.min.js"></script>
+  <script src="vendor/d3-geo.v3.1.1.min.js"></script>
+  <script src="vendor/d3-selection.v3.0.0.min.js"></script>
+  <script src="berlin-data.js?v=1" defer></script>
+  <script src="berlin-map.js?v=2" defer></script>
 </head>
 
 <body>
@@ -48,8 +53,13 @@
   <main>
 
     <section id="about" class="section">
-      <div class="about-text">
+      <div class="about-aside">
         <h2>About the Network</h2>
+        <figure class="about-map">
+          <div id="berlin-map" class="berlin-map"></div>
+        </figure>
+      </div>
+      <div class="about-text">
         <p>
           B-IDDE is a <mark>Berlin-based interdisciplinary network</mark> connecting researchers working on infectious disease
           dynamics, epidemiological modelling, data science, phylodynamics, and policy-relevant outbreak analysis.
@@ -71,22 +81,11 @@
           presentations from members of the network as well as regular invited speakers on current research and
           policy-relevant topics in the field.
         </p>
-        <a class="ects-badge" href="https://promotion.charite.de/en/doctorate_environment/recognition" target="_blank">
-          <span class="ects-icon">🎓</span>
-          <span><strong>ECTS accredited</strong><br>Earn credits for attending – ask the <span class="ects-link">secretariat</span> for details.</span>
-        </a>
-      </div>
-      <div class="about-image">
-        <img src="Pics/Background_bw.jpg" alt="Network visualization">
-        <div class="institution-nodes" aria-label="Member institutions">
-          <a class="inst-node" style="top:14%;left:22%;animation-delay:0.0s" href="https://www.charite.de/en/" target="_blank" title="Charité – Universitätsmedizin Berlin"><span class="inst-dot"></span>Charité</a>
-          <a class="inst-node" style="top:8%;left:60%;animation-delay:0.4s" href="https://pandemichub.who.int/" target="_blank" title="WHO Hub for Pandemic and Epidemic Intelligence"><span class="inst-dot"></span>WHO Pandemic Hub</a>
-          <a class="inst-node" style="top:30%;left:10%;animation-delay:0.8s" href="https://www.rki.de" target="_blank" title="Robert Koch Institute"><span class="inst-dot"></span>Robert Koch Institute</a>
-          <a class="inst-node" style="top:44%;left:52%;animation-delay:1.2000000000000002s" href="https://www.mpiib-berlin.mpg.de/" target="_blank" title="Max Planck Institute for Infection Biology"><span class="inst-dot"></span>MPI Infection Biology</a>
-          <a class="inst-node" style="top:70%;left:8%;animation-delay:1.6s" href="https://www.tu.berlin/" target="_blank" title="Technische Universität Berlin"><span class="inst-dot"></span>TU Berlin</a>
-          <a class="inst-node" style="top:80%;left:55%;animation-delay:2.0s" href="https://www.fu-berlin.de/" target="_blank" title="Freie Universität Berlin"><span class="inst-dot"></span>FU Berlin</a>
-          <a class="inst-node" style="top:90%;left:18%;animation-delay:2.4000000000000004s" href="https://www.hu-berlin.de/" target="_blank" title="Humboldt University of Berlin"><span class="inst-dot"></span>HU Berlin</a>
-        </div>
+        <p>
+          The meetings are <mark>ECTS accredited</mark>, so doctoral researchers can earn credits for attending – see
+          <a href="https://promotion.charite.de/en/doctorate_environment/recognition" target="_blank" rel="noopener">how credits are recognised</a>
+          or ask the <a href="#contact">secretariat</a> for details.
+        </p>
       </div>
     </section>
 
@@ -98,7 +97,7 @@
       <div class="events-grid past-grid" id="past-events"></div>
 
       <div class="show-more-btn-container">
-        <button id="show-more-past-events" class="show-more-btn">Show More</button>
+        <button id="show-more-past-events" class="show-more-btn">Show older events</button>
       </div>
 
     </section>
@@ -276,7 +275,7 @@
       const pastContainer = document.getElementById('past-events');
 
       upcomingContainer.innerHTML = upcomingEvents.map(e => buildEventCard(e)).join('');
-      pastContainer.innerHTML = pastEvents.map((e, idx) => buildEventCard(e, idx >= 6)).join('');
+      pastContainer.innerHTML = pastEvents.map((e, idx) => buildEventCard(e, idx >= 8)).join('');
 
       // Setup show-more button
       setupShowMoreButton();
@@ -299,7 +298,7 @@
               event.classList.add("hidden");
             }
           });
-          showMoreBtn.innerText = isHidden ? "Show Less" : "Show More";
+          showMoreBtn.innerText = isHidden ? "Show fewer events" : "Show older events";
         });
       }
     }
