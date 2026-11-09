@@ -38,8 +38,8 @@ const EVENTS_DATA = {
           "speaker": "Hugo Soubrier"
         },
         {
-          "topic": "Airport-Level Exportation Risk of Ebola Virus Disease 2026",
-          "speaker": "Sten de Schrijver"
+          "topic": "tbc",
+          "speaker": "tbc"
         }
       ],
       "place": "Charité - Universitätsmedizin Berlin"
@@ -53,8 +53,8 @@ const EVENTS_DATA = {
       },
       "seminar": [
         {
-          "topic": "tbc",
-          "speaker": "tbc"
+          "topic": "Airport-Level Exportation Risk of Ebola Virus Disease 2026",
+          "speaker": "Sten de Schrijver"
         },
         {
           "topic": "tbc",
