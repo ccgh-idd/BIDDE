@@ -38,8 +38,8 @@ const EVENTS_DATA = {
           "speaker": "Hugo Soubrier"
         },
         {
-          "topic": "tbc",
-          "speaker": "tbc"
+          "topic": "Modelling to aid the Ebola response and the impact of AI",
+          "speaker": "Sebastian Funk"
         }
       ],
       "place": "Charité - Universitätsmedizin Berlin"
